@@ -9,7 +9,6 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Connect using the hidden variable
 client = MongoClient(os.getenv("MONGO_URI"))
 db = client.url_shortener
 urls_collection = db.urls
